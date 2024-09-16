@@ -1,21 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.EnhancedTouch;
 
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D player;
     public float jumpForce = 5f;
-    public float moveSpeed = 40f;
+    public float moveSpeed = 100;
     public float direction;
-    public float jumpCooldown = 100f; //Adjust jump Cooldown
-    private bool canJump = true;
     private bool moveLeft, moveRight;
-    public bool crouch;
-
-    public Animator animator;
 
     //inputSystem script
     PlayerControls controls;
@@ -39,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         player.velocity = new Vector2(direction * moveSpeed * Time.deltaTime, player.velocity.y);
-
+        
         if (moveLeft)
         {
             transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
@@ -50,38 +43,11 @@ public class PlayerMovement : MonoBehaviour
             transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
         }
 
-        if (Mathf.Abs(player.velocity.y) < 0.1f)
-        {
-            canJump = true;
-        }
     }
 
     public void JumpInput()
     {
-        if (canJump)
-        {
-            player.velocity = new Vector2(player.velocity.x, jumpForce);
-            StartCoroutine(JumpCooldown());
-        }
-
-    }
-
-    IEnumerator JumpCooldown()
-    {
-        canJump = false;
-        yield return new WaitForSeconds(jumpCooldown);
-        canJump = true;
-    }
-
-
-    public void CrouchInputButtonDown()
-    {
-        crouch = true;
-    }
-
-    public void CrouchInputButtonUp()
-    {
-        crouch = false;
+        player.velocity = new Vector2(player.velocity.x, jumpForce);
     }
 
     public void LeftInputButtonDown()
@@ -91,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         direction = -1;
     }
 
-    public void LeftInputButtonUp()
+    public void LeftInputButtonUp() 
     {
         moveLeft = false;
     }
@@ -103,9 +69,9 @@ public class PlayerMovement : MonoBehaviour
         direction = 1;
     }
 
-    public void RightInputButtonUp()
+    public void RightInputButtonUp() 
     {
         moveRight = false;
-
+    
     }
 }
