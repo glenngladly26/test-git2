@@ -15,6 +15,7 @@
                     "initialStateCheck": true
                 },
                 {
+<<<<<<< HEAD
                     "name": "Crouch",
                     "type": "Button",
                     "id": "5f9410fe-0730-4c0e-bc39-822c0cb42fc2",
@@ -26,6 +27,10 @@
                 {
                     "name": "Jump",
                     "type": "Button",
+=======
+                    "name": "Jump",
+                    "type": "Value",
+>>>>>>> asset
                     "id": "ee6cf988-a071-48b4-ad41-3c9654076bdf",
                     "expectedControlType": "Button",
                     "processors": "",
@@ -49,6 +54,7 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+<<<<<<< HEAD
                 },
                 {
                     "name": "Attack",
@@ -58,13 +64,19 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+=======
+>>>>>>> asset
                 }
             ],
             "bindings": [
                 {
                     "name": "",
                     "id": "ffc41211-13b3-4f67-8c3f-1f3b1a34e46b",
+<<<<<<< HEAD
                     "path": "<Touchscreen>/Press",
+=======
+                    "path": "<Touchscreen>/touch0/tap",
+>>>>>>> asset
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -104,6 +116,7 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
+<<<<<<< HEAD
                 },
                 {
                     "name": "",
@@ -126,6 +139,8 @@
                     "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
+=======
+>>>>>>> asset
                 }
             ]
         }

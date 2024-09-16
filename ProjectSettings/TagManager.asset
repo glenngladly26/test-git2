@@ -3,19 +3,31 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags:
   - Ground
   - Pintu
   - Teleporter
+=======
+  tags: []
+>>>>>>> asset
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
+<<<<<<< HEAD
   - Ground
   - Water
   - UI
   - Player
   - Enemy
+=======
+  - 
+  - Water
+  - UI
+  - 
+  - 
+>>>>>>> asset
   - 
   - 
   - 
@@ -44,9 +56,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
   - name: Backdoor
     uniqueID: 2602683535
     locked: 0
   - name: Player
     uniqueID: 3383599779
     locked: 0
+=======
+>>>>>>> asset

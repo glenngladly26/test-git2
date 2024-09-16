@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+<<<<<<< HEAD
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.EnhancedTouch;
+=======
+>>>>>>> asset
 
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D player;
+<<<<<<< HEAD
     public float jumpForce;
     public float moveSpeed;
     public float direction;
@@ -16,6 +20,12 @@ public class PlayerMovement : MonoBehaviour
     public bool crouch;
 
     public Animator animator;
+=======
+    public float jumpForce = 5f;
+    public float moveSpeed = 100;
+    public float direction;
+    private bool moveLeft, moveRight;
+>>>>>>> asset
 
     //inputSystem script
     PlayerControls controls;
@@ -39,7 +49,11 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         player.velocity = new Vector2(direction * moveSpeed * Time.deltaTime, player.velocity.y);
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> asset
         if (moveLeft)
         {
             transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
@@ -50,14 +64,18 @@ public class PlayerMovement : MonoBehaviour
             transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
         }
 
+<<<<<<< HEAD
         if (Mathf.Abs(player.velocity.y) < 0.1f)
         {
             canJump = true;
         }
+=======
+>>>>>>> asset
     }
 
     public void JumpInput()
     {
+<<<<<<< HEAD
         if (canJump && Mathf.Abs(player.velocity.y) < 0.1f) // Pastikan kecepatan vertikal mendekati nol
         {
             player.velocity = new Vector2(player.velocity.x, jumpForce);
@@ -80,6 +98,9 @@ public class PlayerMovement : MonoBehaviour
     public void CrouchInputButtonUp()
     {
         crouch = false;
+=======
+        player.velocity = new Vector2(player.velocity.x, jumpForce);
+>>>>>>> asset
     }
 
     public void LeftInputButtonDown()
@@ -89,7 +110,11 @@ public class PlayerMovement : MonoBehaviour
         direction = -1;
     }
 
+<<<<<<< HEAD
     public void LeftInputButtonUp()
+=======
+    public void LeftInputButtonUp() 
+>>>>>>> asset
     {
         moveLeft = false;
     }
@@ -101,9 +126,18 @@ public class PlayerMovement : MonoBehaviour
         direction = 1;
     }
 
+<<<<<<< HEAD
     public void RightInputButtonUp()
     {
         moveRight = false;
 
     }
 }
+=======
+    public void RightInputButtonUp() 
+    {
+        moveRight = false;
+    
+    }
+}
+>>>>>>> asset
